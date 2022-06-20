@@ -1,0 +1,24 @@
+{
+  "name": "wb-clone",
+  "version": "1.0.0",
+  "description": "Project wildberries clone",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Denis-Sedyuk/WB-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Denis-Sedyuk/WB-clone/issues"
+  },
+  "homepage": "https://github.com/Denis-Sedyuk/WB-clone#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.1",
+    "parcel": "^2.6.1",
+    "sass": "^1.52.3"
+  }
+}
