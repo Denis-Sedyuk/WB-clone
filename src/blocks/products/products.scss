@@ -1,17 +1,24 @@
 .products {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  color: white;
 
   &__cart {
     position: relative;
-    border: 1px solid blue;
+    border: 1px solid white;
     margin: 20px 10px;
+    border-radius: 16px;
+    transition: 2s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &__photo {
   }
 
   &__info {
+    opacity: 1;
   }
 
   &__price {
