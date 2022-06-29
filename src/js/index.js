@@ -1,52 +1,38 @@
-import { make } from "./utils.js";
-let container = document.querySelector(".container"); 
-console.log(container);
-let cards;
+async function getResponse() {
+  let response = await fetch(
+    "https://62b4de4cda3017eabb120a85.mockapi.io/Post"
+  );
+  let content = await response.json();
+  content = content.splice(0, 12);
 
-function fetchCards() {
-  return fetch("https://62b6b84a6999cce2e8068fa6.mockapi.io/cards").then((response) =>{
-    return response.json();
-  }).then(json => {return json});
-}
+  let card = document.querySelector(".products");
 
-fetchCards().then(json => {
-  cards = json;
-  renderCards(cards);
-});
+  let key;
 
-function renderCards(cards) {
-   
-  let products = make("div","products");
-  console.log(container);
-   
-  for(let card of cards){
-    let products__cart = make("div","products__cart");
-    let products__photo = make("div", "products__photo");
-    let overlay = make("div", "overlay");
-    let overlay__viewing = make("button", "overlay__viewing");
-    overlay__viewing.innerHTML = "Быстрый просмотр";
-    let overlay__discount = make("button", "overlay__discount");
-    overlay__discount.innerHTML = "-10%";
-    let overlay__basket = make("button", "overlay__basket");
-    overlay__basket.innerHTML = "+";
-    let products__info = make("div", "products__info");
-    let products__price = make("div", "products__price");
-    let products__price_old = make("span", "products__price-old");
-    let products__price_new = make("span", "products__price-new");
-    products__price_old.style.textDecoration = "line-through";
-    products__price_old.innerHTML = `${card.priceOld}`;
-    products__price_new.innerHTML = `${card.priceNew}`;
-    products__price.append(products__price_new, products__price_old);
-    let products__name = make("p", "products__name");
-    products__name.innerHTML = `${card.product}`;
-    products__info.append(products__price, products__name); 
-
-    products__photo.innerHTML = `<img src=https://loremflickr.com/320/240/product?random=${card.id} alt="clothes"
-    class="photo"></img>`;
-    overlay.append(overlay__viewing, overlay__discount, overlay__basket);
-    products__cart.append(products__photo, overlay, products__info);
-    products.append(products__cart);
+  for (key in content) {
+    card.innerHTML += `
+        <div class="products__cart">
+          <div class="products__photo">
+            <img
+                 src="${content[key].image}"
+                 alt="clothes"
+                 class="photo"
+            />
+            <div class="overlay">
+              <button class="overlay__viewing">Быстрый просмотр</button>
+              <span class="overlay__discount">-10%</span>
+              <button class="overlay__basket">+</button>
+            </div>
+            </div>
+            <div class="products__info">
+            <div class="products__price">
+            <span class="products__price-new">${content[key].price}</span>
+            <span class="products__price-old"><s>${content[key].prePrice}</s></span>
+            </div>
+            <p class="products__name">${content[key].name}</p>
+          </div>
+        </div>
+    `;
   }
-
-  container.append(products);
 }
+getResponse();
