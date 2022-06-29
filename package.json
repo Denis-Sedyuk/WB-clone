@@ -1,7 +1,7 @@
 {
   "name": "wb-clone",
   "version": "1.0.0",
-  "description": "Project wildberries clone",
+  "description": "Project wildberries clone",  
   "scripts": {
     "start": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html"
