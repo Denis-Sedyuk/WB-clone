@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/Denis-Sedyuk/WB-clone#readme",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.6.1",
-    "parcel": "^2.6.1",
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2",
     "sass": "^1.52.3"
   }
 }
