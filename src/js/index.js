@@ -9,10 +9,8 @@ async function getResponse() {
   
   render(products);
  
-  let search = document.querySelector(".header__search");
-  
-  let searchProducts =  [];
-  console.log(search);
+  let search = document.querySelector(".header__search");  
+  let searchProducts =  [];  
   
   search.addEventListener("keydown", (event) => {    
     if (search.value === "") return;
