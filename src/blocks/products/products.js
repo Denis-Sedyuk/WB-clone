@@ -1,6 +1,14 @@
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("myBtn");
-const product = document.querySelector("modal__product");
+modal.innerHTML = `
+<div id="myModal" class="modal">
+<div class="modal__content">
+<h2>Корзина товаров</h2>
+<div id="cart_content"></div>
+<p class="summa">Итого:</p>
+<button id="clear_cart">Очистить корзину</button>
+</div>
+</div>`;
 let d = document,
   itemBox = d.querySelectorAll(".item_box"),
   cartCont = d.getElementById("cart_content");
