@@ -1,8 +1,8 @@
 function render(products) {
-    let container = document.querySelector(".products");
-    container.innerHTML = "";
-    for (let product in products) {
-      container.innerHTML += `
+  let container = document.querySelector(".products");
+  container.innerHTML = "";
+  for (let product in products) {
+    container.innerHTML += `
           <div class="products__cart">
             <div class="products__photo">
               <img
@@ -25,7 +25,7 @@ function render(products) {
             </div>
           </div>
       `;
-    }
   }
+}
 
-  export {render};
+export { render };
