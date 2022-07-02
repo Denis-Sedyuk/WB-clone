@@ -1,8 +1,10 @@
 @import "./reset";
 @import "./variables.scss";
+@import "./base";
 @import "./utils.scss";
 @import "./fonts.scss";
 
 @import "../blocks/header/header.scss";
+@import "../blocks/basket/basket.scss";
 @import "../blocks/swiper/swiper.scss";
 @import "../blocks/products/products.scss";
