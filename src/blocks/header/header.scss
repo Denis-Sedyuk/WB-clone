@@ -6,13 +6,8 @@
   max-width: 1300px;
   margin: 0 auto;
   padding-top: 30px;
-<<<<<<< HEAD
   border: 1px solid red;
   background-image: linear-gradient(to right, #cb11ab, #4c076c);
-=======
-  border: 1px solid rgb(228, 239, 98);
-  background-image: linear-gradient(to right, #cb11ab,#4c076c);
->>>>>>> 77ca9b9fbc7617b6aad5542144c723d225acdbfb
   border-radius: 10px;
 }
 
@@ -43,8 +38,8 @@
     border-color: #4c076c;
     transition: 4s;
 
-    &:hover{
+    &:hover {
       background-color: #290937;
-    }   
+    }
   }
 }
