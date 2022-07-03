@@ -7,11 +7,21 @@
 
 .bestseller {
   margin-top: 40px;
+  margin-right: 1100px;
   padding: 10px 14px;
   border-radius: 10px;
   size: 18px;
   background-color: #ca6fac;
   color: white;
+  transition: 1s;
+  
+    &:hover{
+      background-color: #af45a2;
+    }
+
+    &:active{
+      background-color: #610d38;
+    }
 }
 
 .swiper-slide {
