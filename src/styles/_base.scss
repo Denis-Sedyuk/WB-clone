@@ -5,9 +5,18 @@ body{
 }
 
 button{
-  //background: url(../assets/img/basket.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.overlay__basket{
+  background-image: url(../assets/img/Math-plus.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.modal__content{
+  background-image: url(../assets/img/pexels-pixabay-59999.jpg);
 }
 

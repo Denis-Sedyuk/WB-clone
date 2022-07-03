@@ -22,7 +22,7 @@
     padding: 20px;
     border: 1px solid #888;
     border-radius: 20px;
-    width: 80%;      
+    width: 60%;      
   }
   
   &__product {
@@ -32,17 +32,19 @@
 }
  #clear_cart{
   padding: 14px;
+  background-color: rgb(204, 255, 0);
+  color: rgb(34, 114, 10);
   border-radius: 14px;
   transition: 1s;
    &:hover{
-    background-color: #888;
+    background-color: rgb(205, 192, 14);
    }
 
    &:active{
-    background-color: rgb(99, 96, 96);
+    background-color: rgb(231, 235, 13);
    }
  }
 
  .summa{
-  color: deeppink;
+  color: white;
  }
