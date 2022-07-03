@@ -18,13 +18,20 @@
         <div class="header">
           <a href="#" class="header__logo">WILDBERRIES</a>
           <input type="text" class="header__search" placeholder="Я ищу..." />
-          <button class="header__basket" id="myBtn">Корзина</button>
+          <button class="header__basket" id="myBtn"><img src="./assets/img/buy.png" ></button>
           <div id="myModal" class="modal"></div>
-        </div>
+        </div>        
 
         <!-- Swiper start -->
         <div class="swiper">
           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="swiper-slide__image"
+                src="./assets/img/pexels-pixabay-59999.jpg"
+                alt="Valley"
+              />
+            </div>
             <div class="swiper-slide">
               <img
                 class="swiper-slide__image"
@@ -53,6 +60,14 @@
                 alt="Valley"
               />
             </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-slide__image"
+                src="./assets/img/strawberry.jpg"
+                alt="Valley"
+              />
+            </div>
+
           </div>
 
           <div class="swiper-pagination"></div>
@@ -69,8 +84,7 @@
     </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/index.js" type="module"></script>
-    <script src="./blocks/basket/basket.js"></script>
-    <script src="blocks/products/products.js"></script>
+
     <script defer src="./blocks/swiper/swiper.js"></script>
   </body>
 </html>

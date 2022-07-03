@@ -4,10 +4,14 @@
   color: white;
 
   &__cart {
+    max-height: 240px;
+    max-width: 200px;
     position: relative;
     border: 1px solid white;
     margin: 20px 10px;
     border-radius: 16px;
+    color: #d6e00e;
+
     transition: 2s;
     &:hover {
       transform: scale(1.2);
@@ -43,6 +47,7 @@
   object-position: center;
   width: 100%;
   height: 100%;
+  border-radius: 16px;
 }
 .overlay {
   cursor: pointer;
@@ -53,19 +58,23 @@
   bottom: 0;
   right: 0;
   transition: opacity 0.3s;
+
   &:hover {
     opacity: 1;
   }
+
   &__viewing {
     position: absolute;
     top: 80px;
     left: 25px;
+    font-size: 12px;
   }
 
   &__discount {
     position: absolute;
-    top: 150px;
+    top: 130px;
     left: 5px;
+    color: #a7cb17;
   }
 
   &__basket {
@@ -73,5 +82,11 @@
     top: 150px;
     right: 5px;
     border-radius: 50%;
+    height: 30px;
+    width: 30px;
+   
+    &:active{
+      background-color: darkviolet;
+    }
   }
 }

@@ -1,13 +1,12 @@
 .wrapper {
   margin-top: 30px;
-  //border: 1px solid black;
 }
 .container {
   text-align: center;
   max-width: 1300px;
   margin: 0 auto;
   padding-top: 30px;
-  border: 1px solid red;
+  border: 1px solid rgb(228, 239, 98);
   background-image: linear-gradient(to right, #cb11ab,#4c076c);
   border-radius: 10px;
 }
@@ -24,8 +23,21 @@
   &__search {
     margin: 0 20px 0;
     flex-basis: 60%;
+    border-radius: 12px;
+    background-color: #dfb1d8;
+    color: white;
+    font-size: 25px;
   }
 
   &__basket {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    border-color: #4c076c;
+    transition: 4s;
+
+    &:hover{
+      background-color: #290937;
+    }   
   }
 }
