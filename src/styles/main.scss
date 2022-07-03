@@ -1,6 +1,12 @@
 @import "./reset";
+<<<<<<< HEAD
 @import "./variables";
 @import "./utils";
+=======
+@import "./variables.scss";
+@import "./base";
+@import "./utils.scss";
+>>>>>>> 77ca9b9fbc7617b6aad5542144c723d225acdbfb
 @import "./fonts.scss";
 
 @import "../blocks/header/header.scss";
