@@ -5,6 +5,7 @@ import {render} from "./ui.js";
 async function getResponse() {
   let container = document.querySelector(".products");
   console.log(container);
+
   let response = await fetch(
     "https://62b4de4cda3017eabb120a85.mockapi.io/Post"
   );
@@ -62,10 +63,12 @@ async function getResponse() {
   
   showAll.addEventListener("click", () => {    
     render(container, products);
+
   }
   );
 }
 
 getResponse();
+
 ProductManager.generateModalContent();
 

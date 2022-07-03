@@ -37,7 +37,6 @@ function render(container, products, label) {
         overlay.style.display = "none";        
       }
   }
-  
 }
 
 export { render };
