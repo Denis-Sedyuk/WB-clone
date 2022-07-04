@@ -1,90 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./styles/main.scss" />
-    <title>Wildberries-clone</title>
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <div class="container">
-        <div class="header">
-          <a href="#" class="header__logo">WILDBERRIES</a>
-          <input type="text" class="header__search" placeholder="Я ищу..." />
-          <button class="header__basket" id="myBtn"><img src="./assets/img/buy.png" ></button>
-          <div id="myModal" class="modal"></div>
-        </div>        
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./styles/main.scss" />
+  <title>Wildberries-clone</title>
+</head>
 
-        <!-- Swiper start -->
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                class="swiper-slide__image"
-                src="./assets/img/pexels-pixabay-59999.jpg"
-                alt="Valley"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                class="swiper-slide__image"
-                src="./assets/img/channel.jpg"
-                alt="Channel"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                class="swiper-slide__image"
-                src="./assets/img/desert.jpg"
-                alt="Desert"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                class="swiper-slide__image"
-                src="./assets/img/mountains.jpg"
-                alt="Mountains"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                class="swiper-slide__image"
-                src="./assets/img/valley.jpg"
-                alt="Valley"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                class="swiper-slide__image"
-                src="./assets/img/strawberry.jpg"
-                alt="Valley"
-              />
-            </div>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="header">
+        <div class="header__logo">
+          <a href="#" class="header__logo-link">WILDBERRIES</a>
+        </div>
+        <input type="text" class="header__search" placeholder="Я ищу..." />
+        <button class="header__basket" id="myBtn"><img src="./assets/img/buy.png"></button>
+        <div id="myModal" class="modal"></div>
+      </div>
 
+      <!-- Swiper start -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="swiper-slide__image" src="./assets/img/pexels-pixabay-59999.jpg" alt="Valley" />
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide__image" src="./assets/img/channel.jpg" alt="Channel" />
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide__image" src="./assets/img/desert.jpg" alt="Desert" />
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide__image" src="./assets/img/mountains.jpg" alt="Mountains" />
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide__image" src="./assets/img/valley.jpg" alt="Valley" />
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide__image" src="./assets/img/strawberry.jpg" alt="Valley" />
           </div>
 
-          <div class="swiper-pagination"></div>
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
 
-        <!-- Swiper end -->
+        <div class="swiper-pagination"></div>
 
-        <button class="bestseller">Хиты Продаж</button>
-        <div class="products"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-    </div>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/index.js" type="module"></script>
 
-    <script defer src="./blocks/swiper/swiper.js"></script>
-  </body>
+      <!-- Swiper end -->
+
+      <button class="bestseller">Хиты Продаж</button>
+      <div class="products"></div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/index.js" type="module"></script>
+
+  <script defer src="./blocks/swiper/swiper.js"></script>
+</body>
+
 </html>
