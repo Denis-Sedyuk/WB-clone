@@ -1,22 +1,41 @@
-body{
-    background: url(../assets/img/fioletSky.jpg);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
+body {
+  background: url(../assets/img/fioletSky.jpg);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+
+  @include tablet {
+    background-size: contain;
+  }
+
 }
 
-button{
+button {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.overlay__basket{
+.overlay__basket {
   background-image: url(../assets/img/Math-plus.png);
   background-position: center;
   background-size: contain;
 }
 
-.modal__content{
+
+.overlay__basket_change {
+  position: absolute;
+  top: 150px;
+  right: 5px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-image: url(../assets/img/minus.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.modal__content {
   background-image: url(../assets/img/pexels-pixabay-59999.jpg);
 }
 
