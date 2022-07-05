@@ -2,6 +2,11 @@ body {
   background: url(../assets/img/fioletSky.jpg);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+
+  @include tablet {
+    background-size: contain;
+  }
+
 }
 
 button {
@@ -15,6 +20,7 @@ button {
   background-position: center;
   background-size: contain;
 }
+
 
 .overlay__basket_change {
   position: absolute;
@@ -32,3 +38,4 @@ button {
 .modal__content {
   background-image: url(../assets/img/pexels-pixabay-59999.jpg);
 }
+
