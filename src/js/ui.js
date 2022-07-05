@@ -1,9 +1,9 @@
-function render(container, products, label) {
-  
+function render(container, products, label = "overlay__basket") {
   container.innerHTML = "";
-  for (let product in products) {    
+  for (let product in products) {
     container.innerHTML += `
-    <div class="products__cart" data-id="${products[product].id}" 
+    <div class="products__cart" data-index="${products[product].index}"
+    data-id="${products[product].id}" 
     data-name="${products[product].name}"
     data-price="${products[product].price}"
     data-prePrice="${products[product].prePrice}" >
@@ -16,7 +16,7 @@ function render(container, products, label) {
     <div class="overlay">
     <button class="overlay__viewing">Быстрый просмотр</button>
     <span class="overlay__discount">-10%</span>
-    <input type="button" class="overlay__basket"></input>
+    <input type="button" class="${label}"></input>
     </div>
     </div>
     <div class="products__info">
@@ -28,14 +28,6 @@ function render(container, products, label) {
     </div>
     </div>
     `;
-  }
-
-  let overlays = document.querySelectorAll(".overlay");
-
-  if (label === "false"){
-      for(let overlay of overlays){
-        overlay.style.display = "none";        
-      }
   }
 }
 

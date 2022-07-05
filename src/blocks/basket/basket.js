@@ -1,10 +1,8 @@
 const json = localStorage.getItem("products") || "[]";
-console.log(json);
 const products = JSON.parse(json);
 
 const btn = document.getElementById("myBtn");
 const modal = document.getElementById("myModal");
-
 
 const ProductManager = {
   products: products,
@@ -16,17 +14,17 @@ const ProductManager = {
       <p class="summa">Итого:</p>
       <button id="clear_cart">Очистить корзину</button>
       <div class="modal__basket"></div>
-    </div>`;    
+    </div>`;
     btn.addEventListener("click", () => {
       modal.style.display = "block";
     });
-    
+
     window.addEventListener("click", (event) => {
       if (event.target === modal) {
         modal.style.display = "none";
       }
     });
-    
+
     const clear = document.getElementById("clear_cart");
 
     clear.addEventListener("click", () => {
@@ -35,14 +33,15 @@ const ProductManager = {
       let result = document.querySelector(".summa");
       localStorage.clear();
       ProductManager.products = [];
-      basket.innerHTML ="";
+      basket.innerHTML = "";
       result.innerHTML = "";
-      cartCont.innerHTML = "Корзина очищена.";      
-    }) 
+      cartCont.innerHTML = "Корзина очищена.";
+    });
   },
-   
-  add(id, link, name, price, prePrice){
-    let product ={
+
+  add(id, link, name, price, prePrice) {
+    let product = {
+      index: this.products.length + 1,
       id: id,
       image: link,
       name: name,
@@ -54,11 +53,27 @@ const ProductManager = {
     this.saveToLocalStorage();
   },
 
-  saveToLocalStorage(){
+  delete(currentIndex) {
+    this.products = this.products.filter(
+      (product) => +currentIndex !== product.index
+    );
+    this.saveToLocalStorage();
+  },
+
+  saveToLocalStorage() {
     const json = JSON.stringify(this.products);
     localStorage.setItem("products", json);
-  }  
+  },
+
+  summa(products) {
+    let sum = 0;
+    for (let product of products) {
+      sum += +product.price;
+    }
+
+    let result = document.querySelector(".summa");
+    result.innerHTML = `<h2>Общая сумма покупок:${sum}</h2>`;
+  },
 };
 
 export default ProductManager;
-
