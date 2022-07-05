@@ -4,7 +4,7 @@ const products = JSON.parse(json);
 const btn = document.getElementById("myBtn");
 const modal = document.getElementById("myModal");
 
-const ProductManager = {
+const ProductManagerBasket = {
   products: products,
   generateModalContent() {
     modal.innerHTML = `
@@ -32,7 +32,7 @@ const ProductManager = {
       let basket = document.querySelector(".modal__basket");
       let result = document.querySelector(".summa");
       localStorage.clear();
-      ProductManager.products = [];
+      ProductManagerBasket.products = [];
       basket.innerHTML = "";
       result.innerHTML = "";
       cartCont.innerHTML = "Корзина очищена.";
@@ -76,4 +76,4 @@ const ProductManager = {
   },
 };
 
-export default ProductManager;
+export default ProductManagerBasket;
