@@ -10,7 +10,6 @@
   max-width: rem(1300px);
   margin: 0 auto;
   padding-top: rem(30px);
-  border: 1px solid red;
   background-image: linear-gradient(to right, #cb11ab, #4c076c);
   border-radius: rem(10px);
 }
@@ -52,9 +51,10 @@
   &__basket {
     width: rem(80px);
     height: rem(80px);
+    cursor: pointer;
     border-radius: rem(12px);
     border-color: #4c076c;
-    transition: 4s;
+    transition: 1s;
 
     &:hover {
       background-color: #290937;

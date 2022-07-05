@@ -1,7 +1,29 @@
+.bestseller {
+  margin-top: rem(40px);
+  margin-inline: auto;
+  padding: rem(10px) rem(14px);
+  border-radius: rem(10px);
+  size: 18px;
+  cursor: pointer;
+  background-color: #ca6fac;
+  color: white;
+  transition: 1s;
+  transition: 1s;
+  &:hover {
+    transform: scale(1.2);
+    background-color: #af45a2;
+  }
+
+  &:active {
+    background-color: #610d38;
+  }
+}
+
 .products {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   padding-block: rem(15px);
+  padding-inline: 20px;
   color: white;
 
   @include tablet {
@@ -9,6 +31,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: rem(10px);
+    padding-inline: rem(10px);
   }
 
   @include mobile {
@@ -23,10 +46,9 @@
     margin-bottom: 20px;
     border-radius: 16px;
     color: #d6e00e;
-
-    transition: 2s;
+    transition: 1s;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 
@@ -38,12 +60,6 @@
     display: flex;
     justify-content: space-around;
     padding: rem(5px) rem(20px);
-  }
-
-  &__price-new {
-  }
-
-  &__price-old {
   }
 
   &__name {
@@ -77,6 +93,7 @@
     top: rem(80px);
     left: rem(25px);
     font-size: rem(12px);
+    opacity: 0.3;
   }
 
   &__discount {
@@ -93,6 +110,11 @@
     border-radius: 50%;
     height: rem(30px);
     width: rem(30px);
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
 
     &:active {
       background-color: darkviolet;
