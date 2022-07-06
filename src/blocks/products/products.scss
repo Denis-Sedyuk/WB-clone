@@ -1,0 +1,123 @@
+.bestseller {
+  margin-top: rem(40px);
+  margin-inline: auto;
+  padding: rem(10px) rem(14px);
+  border-radius: rem(10px);
+  size: 18px;
+  cursor: pointer;
+  background-color: #ca6fac;
+  color: white;
+  transition: 1s;
+  transition: 1s;
+  &:hover {
+    transform: scale(1.2);
+    background-color: #af45a2;
+  }
+
+  &:active {
+    background-color: #610d38;
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding-block: rem(15px);
+  padding-inline: 20px;
+  color: white;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: rem(10px);
+    padding-inline: rem(10px);
+  }
+
+  @include mobile {
+    justify-content: space-around;
+  }
+
+  &__cart {
+    max-height: rem(240px);
+    max-width: rem(200px);
+    position: relative;
+    border: rem(1px) solid white;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    color: #d6e00e;
+    transition: 1s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__info {
+    opacity: 1;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-around;
+    padding: rem(5px) rem(20px);
+  }
+
+  &__name {
+    text-align: left;
+    margin-left: rem(40px);
+  }
+}
+.photo {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: rem(16px);
+}
+.overlay {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__viewing {
+    position: absolute;
+    top: rem(80px);
+    left: rem(25px);
+    font-size: rem(12px);
+    opacity: 0.3;
+  }
+
+  &__discount {
+    position: absolute;
+    top: rem(130px);
+    left: rem(5px);
+    color: #a7cb17;
+  }
+
+  &__basket {
+    position: absolute;
+    top: rem(150px);
+    right: rem(5px);
+    border-radius: 50%;
+    height: rem(30px);
+    width: rem(30px);
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      background-color: darkviolet;
+    }
+  }
+}

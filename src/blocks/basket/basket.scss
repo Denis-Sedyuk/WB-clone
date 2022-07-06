@@ -1,0 +1,72 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: auto;
+  background-color: rgb(0, 0, 0, 0.7);
+
+  &__basket {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__content {
+    background-image: url(../assets/img/pexels-pixabay-59999.jpg);
+    margin: 15% auto;
+    padding: 0 20px;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 60%;
+  }
+
+  &__product {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#clear_cart {
+  padding: 14px;
+  cursor: pointer;
+  background-color: rgb(204, 255, 0);
+  color: rgb(34, 114, 10);
+  border-radius: 14px;
+  transition: 1s;
+  &:hover {
+    background-color: rgb(205, 192, 14);
+  }
+
+  &:active {
+    background-color: rgb(231, 235, 13);
+  }
+}
+
+.summa {
+  color: white;
+}
+
+.overlay__basket {
+  background-image: url(../assets/img/Math-plus.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.overlay__basket_change {
+  position: absolute;
+  top: 150px;
+  right: 5px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-image: url(../assets/img/minus.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
